@@ -1,0 +1,20 @@
+---
+const faqs = [
+  { q: 'Does Unloop block Instagram?', a: 'No. It only pauses the Reels feed, and you can always choose to keep watching. Messages, stories, and the rest of Instagram work normally.' },
+  { q: 'Can I still watch reels my friends send me?', a: 'Yes. Reels opened from a chat play freely. The pause only appears if you swipe on into the feed.' },
+  { q: 'Does Unloop read my messages?', a: 'No. It only knows which Instagram screen is open and when you swipe to a new reel.' },
+  { q: 'Why does it need Accessibility permission?', a: "It's the only way Android lets an app know you're on the Reels screen. Unloop uses it for that and nothing else, and explains exactly what it does before you turn it on." },
+  { q: 'What if I really want to scroll?', a: 'Then you can. Pick five or ten minutes and enjoy them. Unloop is about choosing, not forbidding.' },
+  { q: 'Will it slow down my phone or drain the battery?', a: "Unloop is under 5 MB and only reacts to Instagram, so it's designed to stay out of the way." },
+  { q: 'Does it work with TikTok or YouTube Shorts?', a: 'Not yet. Instagram Reels comes first.' },
+  { q: 'Is there an iPhone version?', a: "Not right now. iOS doesn't allow apps to detect a specific screen inside another app, which Unloop depends on." },
+];
+---
+<section id="faq">
+  <div class="wrap">
+    <h2>Questions, answered.</h2>
+    <div class="faq" style="margin-top: 40px;">
+      {faqs.map((f) => <details><summary>{f.q}</summary><p>{f.a}</p></details>)}
+    </div>
+  </div>
+</section>

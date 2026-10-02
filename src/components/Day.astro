@@ -1,0 +1,22 @@
+---
+const moments = [
+  { time: '7:00', night: true, title: 'A Reels-free morning', body: 'Reels stay closed for the first half hour of your day. Messages and the rest of Instagram work normally.' },
+  { time: '13:20', title: 'One question after lunch', body: `You open Reels. Unloop starts with one slow breath, then shows today's total and asks how you feel. You tap "Tired."` },
+  { time: '13:21', title: 'Something that actually helps', body: 'It suggests standing at a window and finding three things that are moving. You go. Afterwards, a quick check-in asks how you feel now. You tap "Better," and Unloop remembers what works for you.' },
+  { time: '18:45', title: 'A friend sends a reel', body: 'It plays freely, with no pause. When you swipe on into more Reels, the pause returns.' },
+  { time: '21:30', title: 'A gentle nudge', body: "The counter passes 100 for the day and briefly grows. Your companion looks sleepy. You choose five more minutes, and when they're up, Unloop asks again." },
+  { time: '22:30', night: true, title: 'Reels close for the night', body: 'The last half hour before bed is yours again.' },
+  { time: '8:00', title: 'See your progress', body: 'Your dashboard shows yesterday against your goal, when the urges came, and which breaks left you feeling better.' },
+];
+---
+<section id="day">
+  <div class="wrap">
+    <h2>A day with Unloop.</h2>
+    <p class="lede">An example day, start to finish. Every step is something the app does today.</p>
+    <ol class="timeline">
+      {moments.map((m) => (
+        <li class={m.night ? 'night' : undefined}><time>{m.time}</time><span class="dot"></span><div><h3>{m.title}</h3><p>{m.body}</p></div></li>
+      ))}
+    </ol>
+  </div>
+</section>

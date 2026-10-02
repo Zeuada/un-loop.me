@@ -1,0 +1,18 @@
+---
+const states = ['Fresh', 'Wandering', 'Sleepy', 'Foggy', 'Recharged'];
+---
+<section class="comp-sec" id="companion">
+  <div class="wrap comp-grid">
+    <div>
+      <h2>Meet your focus companion.</h2>
+      <p class="lede">It lives in the counter. As the scroll goes on, it gets sleepy and foggy. Step away, and it recharges. It's a simple way to see what a long scroll feels like, without a single word of judgment.</p>
+    </div>
+    <div class="comp-stage">
+      <span class="big" id="bigOrb" data-orb="fresh" aria-hidden="true"></span>
+      <div class="states" role="group" aria-label="Companion states">
+        {states.map((s, i) => <button type="button" data-state={s.toLowerCase()} aria-pressed={i === 0 ? 'true' : 'false'}>{s}</button>)}
+      </div>
+      <p class="state-note" id="stateNote" aria-live="polite">Fresh: the start of your day, attention intact.</p>
+    </div>
+  </div>
+</section>

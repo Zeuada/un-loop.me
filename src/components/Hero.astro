@@ -1,0 +1,23 @@
+---
+import CheckIcon from './CheckIcon.astro';
+import PhoneDemo from './PhoneDemo.astro';
+
+const facts = ['Android, works with Instagram Reels', 'Under 5 MB', 'Your data stays on your phone'];
+---
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Take your time back from Reels.</h1>
+      <p class="lede">Unloop catches the scroll before it catches you. It pauses the Reels feed, asks how you're really feeling, and offers something better to do, while a live counter shows where your day is going.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#get">Get early access</a>
+        <a class="btn btn-quiet" href="#how">See how it works</a>
+      </div>
+      <ul class="hero-facts">
+        {facts.map((f) => <li><CheckIcon />{f}</li>)}
+      </ul>
+    </div>
+
+    <PhoneDemo />
+  </div>
+</section>

@@ -1,0 +1,56 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+}
+
+const {
+  title = 'Unloop: take your time back from Reels',
+  description = 'Unloop is an Android app that helps you break the Instagram Reels habit with a mindful pause, a live reel counter, and better things to do. Built on behavior science, designed without shame.',
+  ogTitle = title,
+  ogDescription = 'A pause, a better choice, and a live count of your day. Built on behavior science, designed without shame.',
+} = Astro.props;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Unloop',
+  operatingSystem: 'Android',
+  applicationCategory: 'HealthApplication',
+  description: 'Helps you break the Instagram Reels habit with a mindful pause, a live reel counter, and feeling-matched alternatives to scrolling.',
+  publisher: { '@type': 'Organization', name: 'Zeuada', url: 'https://zeuada.com' },
+};
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{title}</title>
+<meta name="description" content={description}>
+<meta property="og:title" content={ogTitle}>
+<meta property="og:description" content={ogDescription}>
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd, null, 2)} />
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <radialGradient id="orbBright" cx="35%" cy="32%" r="75%"><stop offset="0" stop-color="#FFD684"/><stop offset="1" stop-color="#F08A24"/></radialGradient>
+    <radialGradient id="orbDim" cx="35%" cy="32%" r="75%"><stop offset="0" stop-color="#E8B86C"/><stop offset="1" stop-color="#B97F38"/></radialGradient>
+    <radialGradient id="orbGlow" cx="50%" cy="50%" r="50%"><stop offset="0.45" stop-color="#FFB547" stop-opacity="0.5"/><stop offset="1" stop-color="#FFB547" stop-opacity="0"/></radialGradient>
+  </defs>
+</svg>
+
+<slot />
+
+</body>
+</html>

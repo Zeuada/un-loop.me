@@ -1,0 +1,19 @@
+---
+const truths = [
+  { title: 'Time disappears', body: "Fast, endless, algorithm-picked videos make it hard to feel how long you've been watching. Research on short-video use finds people often misjudge it." },
+  { title: 'It runs on autopilot', body: "The urge usually isn't for Reels at all. It's a way out of boredom, tiredness, stress, or a task you'd rather not start." },
+  { title: 'Guilt makes it worse', body: 'Scrolling to escape a feeling, then feeling bad about scrolling, adds a second bad feeling. That makes the next scroll more likely.' },
+  { title: "Blocking doesn't fix it", body: 'Hard blocks get switched off, and they cut you off from the good parts of Instagram too, like your friends.' },
+];
+---
+<section class="problem">
+  <div class="wrap problem-grid">
+    <div>
+      <h2>You meant to watch one.</h2>
+      <p class="lede">It isn't a willpower problem. Reels are designed so the next one is always easier than stopping.</p>
+    </div>
+    <ul class="truths">
+      {truths.map((t) => <li><h3>{t.title}</h3><p>{t.body}</p></li>)}
+    </ul>
+  </div>
+</section>

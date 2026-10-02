@@ -1,0 +1,30 @@
+---
+const steps = [
+  { stage: 'Feeling', fix: 'Name it.', what: `Unloop's first question is "What are you feeling?" Putting a feeling into words takes some of its pull away.` },
+  { stage: 'Urge', fix: 'A pause.', what: 'Opening the Reels feed brings a short, clear pause, so a reflex becomes a choice.' },
+  { stage: 'Scroll', fix: 'Live counter.', what: "If you keep watching, a counter at the top shows today's reels and time, so the minutes never vanish unnoticed." },
+  { stage: 'Guilt', fix: 'No shame.', what: 'No streaks to break, no red warnings. Just a better option next time, and credit when you step away.' },
+];
+---
+<section class="loop-sec" id="how">
+  <div class="wrap">
+    <h2>Break the loop at every step.</h2>
+    <p class="lede">Scrolling habits run in a loop: a feeling, an urge, the scroll, then guilt that starts it again. Unloop steps in at each point.</p>
+    <div class="loop-grid">
+      <svg class="loop-svg" id="loopSvg" viewBox="0 0 480 480" role="img" aria-label="The scrolling loop: feeling, urge, scroll, guilt">
+        <circle class="ring" cx="240" cy="240" r="165"/>
+        <g class="center-orb" style="transform-origin: 240px 240px" id="loopOrb"></g>
+        <g class="node" transform="translate(240,75)"><circle r="62"/><text class="lbl" y="2">Feeling</text><text class="fix" y="88">Name it</text></g>
+        <g class="node" transform="translate(405,240)"><circle r="62"/><text class="lbl" y="6">Urge</text><text class="fix" y="88">A pause</text></g>
+        <g class="node" transform="translate(240,405)"><circle r="62"/><text class="lbl" y="6">Scroll</text><text class="fix" y="-76">Live counter</text></g>
+        <g class="node" transform="translate(75,240)"><circle r="62"/><text class="lbl" y="6">Guilt</text><text class="fix" y="88">No shame</text></g>
+      </svg>
+      <div>
+        <ul class="loop-steps">
+          {steps.map((s) => <li><span class="stage">{s.stage}</span><span class="what"><b>{s.fix}</b> {s.what}</span></li>)}
+        </ul>
+        <button class="btn btn-primary loop-toggle" id="loopToggle" type="button" aria-pressed="false">Show where Unloop steps in</button>
+      </div>
+    </div>
+  </div>
+</section>

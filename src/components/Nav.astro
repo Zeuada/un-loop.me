@@ -1,0 +1,18 @@
+---
+const links = [
+  { href: '#how', label: 'How it works' },
+  { href: '#features', label: 'Features' },
+  { href: '#science', label: 'Science' },
+  { href: '#privacy', label: 'Privacy' },
+  { href: '#faq', label: 'FAQ' },
+];
+---
+<header class="nav">
+  <a class="brand" href="#top" aria-label="Unloop home"><span data-orb="fresh" aria-hidden="true"></span>Unloop</a>
+  <nav aria-label="Main">
+    <ul>
+      {links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+    </ul>
+  </nav>
+  <a class="btn btn-primary" href="#get">Get early access</a>
+</header>

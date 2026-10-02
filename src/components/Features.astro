@@ -1,0 +1,45 @@
+---
+const feelings = ['Bored', 'Tired', 'Stressed', 'Lonely', 'Avoiding something', 'Just habit', 'Something specific'];
+const week = [88, 74, 80, 58, 62, 34, 46];
+const lowDay = 5;
+---
+<section id="features" style="padding-top: 0;">
+  <div class="wrap">
+    <h2>Small tools that add up.</h2>
+    <div class="feat-grid">
+      <article class="feat f-counter">
+        <h3>A live counter that stays noticeable</h3>
+        <p>Today's reels and time, right at the top of the screen while you scroll. It changes its look as the day goes on, because the brain tunes out anything that stays the same.</p>
+        <div class="pill-row">
+          <div class="pill"><span data-orb="fresh" aria-hidden="true"></span>24 reels today</div>
+          <div class="pill"><span data-orb="wandering" aria-hidden="true"></span>31 min today</div>
+          <div class="pill milestone"><span data-orb="sleepy" aria-hidden="true"></span>100 reels today</div>
+        </div>
+      </article>
+      <article class="feat f-feel">
+        <h3>One honest question</h3>
+        <p>Seven feelings, shuffled each time so your thumb can't tap on autopilot.</p>
+        <div class="chips">{feelings.map((f) => <span class="chip">{f}</span>)}</div>
+      </article>
+      <article class="feat f-act">
+        <h3>Breaks matched to you</h3>
+        <p>Over 30 tiny activities, from a four-minute walk to a voice note to a friend, matched to your feeling and the time of day. Unloop learns which ones help you.</p>
+      </article>
+      <article class="feat f-budget">
+        <h3>A daily budget, gently kept</h3>
+        <p>Set how much Reels feels right. Past it, continuing takes a short pause and retyping your own reason for cutting back.</p>
+        <div class="bar" aria-hidden="true"><span></span></div>
+        <div class="bar-label" aria-hidden="true"><span>96 of 150 reels</span><span>54 left</span></div>
+      </article>
+      <article class="feat f-windows">
+        <h3>Reels-free mornings and nights</h3>
+        <p>Start and end your day without the feed. Changes take effect the next day, so you can't undo them in a weak moment.</p>
+      </article>
+      <article class="feat f-dash">
+        <h3>Progress, not just numbers</h3>
+        <p>See today against your goal, your week compared with your first week, when the urges come, and which breaks left you feeling better.</p>
+        <div class="week" aria-hidden="true">{week.map((h, i) => <span class={i === lowDay ? 'low' : undefined} style={`height:${h}%`}></span>)}</div>
+      </article>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,40 @@
+---
+import CheckIcon from './CheckIcon.astro';
+import CrossIcon from './CrossIcon.astro';
+
+const uses = [
+  'Which Instagram screen is open, so it knows when you enter Reels or open a reel from a chat',
+  'When you swipe to a new reel, to count reels and time',
+  'Permission to show the pause and counter over Instagram',
+];
+const never = ['Your messages', 'Captions and comments', 'Anything outside Instagram', 'Which videos you watch'];
+const facts = [
+  { title: 'On your phone', body: 'Counts, times, and check-ins are stored only on your device.' },
+  { title: 'No ads', body: 'Unloop has no ads, and your data is never sold.' },
+  { title: 'Under 5 MB', body: 'Built natively for Android, so it stays small and quick.' },
+];
+---
+<section class="loop-sec" id="privacy">
+  <div class="wrap">
+    <h2>Private by design.</h2>
+    <p class="lede">Unloop uses Android's Accessibility permission to know when you're in Reels. Here is exactly what that means.</p>
+    <div class="priv-grid">
+      <div class="priv-card sees">
+        <h3>What Unloop uses</h3>
+        <ul>
+          {uses.map((u) => <li><CheckIcon />{u}</li>)}
+        </ul>
+      </div>
+      <div class="priv-card never">
+        <h3>What Unloop never sees</h3>
+        <ul>
+          {never.map((n) => <li><CrossIcon />{n}</li>)}
+        </ul>
+      </div>
+    </div>
+    <div class="facts">
+      {facts.map((f) => <div class="fact"><strong>{f.title}</strong><span>{f.body}</span></div>)}
+    </div>
+    <p class="sci-note">If the app crashes or stops detecting Reels, an anonymous report with no personal data or viewing activity is sent so it can be fixed. You can turn Unloop off anytime in Android settings.</p>
+  </div>
+</section>

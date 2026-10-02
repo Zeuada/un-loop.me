@@ -1,0 +1,60 @@
+<div class="demo">
+  <div class="phone" role="group" aria-label="Interactive demo of Unloop">
+    <div class="screen" id="screen">
+      <div class="reel" id="reel"></div>
+      <div class="reel-shade"></div>
+      <div class="pill" id="pill"><div class="row"><span data-orb="wandering" aria-hidden="true"></span><span id="pillText">244 reels today</span></div><p class="msg" id="pillMsg"></p></div>
+      <div class="appbg" id="appbg"></div>
+
+      <div class="view v-pause" id="vPause">
+        <span data-orb="wandering" aria-hidden="true"></span>
+        <p class="tot" id="pauseTotal">250 reels today · 25 min</p>
+        <p class="ask">What are you feeling?</p>
+        <p class="sub">A quick check-in before you scroll.</p>
+        <div class="tiles" id="tiles"></div>
+      </div>
+
+      <div class="view v-choice" id="vChoice">
+        <p class="echo" id="echo"></p>
+        <div id="acts" style="display:flex;flex-direction:column;gap:7px"></div>
+        <button class="outline" type="button" id="backDay">Back to my day</button>
+        <div class="keep">
+          <p class="k">Keep scrolling</p>
+          <p class="why">I'm the type of person who protects my sleep and gives my work my full attention because rested days go better.</p>
+          <p class="so" id="soFar">Today so far: 250 reels · 25 min</p>
+          <div class="two"><button class="outline" type="button" data-keep="5">5 min</button><button class="outline" type="button" data-keep="10">10 min</button></div>
+        </div>
+      </div>
+
+      <div class="view v-breath" id="vBreath">
+        <div class="ring">
+          <svg class="track" viewBox="0 0 150 150"><circle cx="75" cy="75" r="68" fill="none" stroke="#3B4468" stroke-width="5"/><circle class="prog" cx="75" cy="75" r="68" fill="none" stroke="#FFB547" stroke-width="5" stroke-linecap="round"/></svg>
+          <span class="face" data-orb="fresh" aria-hidden="true"></span>
+        </div>
+        <p class="bt" id="breathText">Breathe in…</p>
+        <p class="bs">Follow the circle.</p>
+      </div>
+
+      <div class="view v-timer" id="vTimer">
+        <p class="tt" id="timerTitle"></p>
+        <p class="tp" id="timerPrompt"></p>
+        <p class="clock" id="clock">2:00</p>
+        <button class="linkbtn" type="button" id="stopBtn">Stop</button>
+      </div>
+
+      <div class="view v-check" id="vCheck">
+        <p class="tt" id="checkTitle"></p>
+        <p class="q">Quick check: better, same, or worse than a few minutes ago?</p>
+        <div class="opts"><button class="pri" type="button" data-feel="better">Better</button><button type="button" data-feel="same">About the same</button><button type="button" data-feel="worse">Worse</button></div>
+      </div>
+
+      <div class="view v-done" id="vDone">
+        <span data-orb="recharged" aria-hidden="true"></span>
+        <p class="tt" id="doneTitle">Recharged.</p>
+        <p id="doneText"></p>
+      </div>
+    </div>
+  </div>
+  <p class="demo-caption" id="caption" aria-live="polite">Watch the counter, then tap a feeling.</p>
+  <button class="replay" id="replay" type="button">Replay the demo</button>
+</div>

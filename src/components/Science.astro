@@ -1,0 +1,68 @@
+---
+const studies = [
+  {
+    title: 'Naming a feeling calms it',
+    finding: "Brain-imaging research found that putting feelings into words reduced activity in the brain's emotional alarm areas and engaged regions linked to self-control.",
+    does: 'The pause starts with "What are you feeling?"',
+    cite: 'Lieberman et al., 2007, Psychological Science',
+  },
+  {
+    title: 'If-then plans turn intentions into action',
+    finding: `A meta-analysis found that simple "when this happens, I'll do that" plans had a medium-to-large effect on reaching goals. Choosing plans from a list works too.`,
+    does: 'You build a plan in a few taps during setup, like "When I feel bored, I step outside."',
+    cite: 'Gollwitzer and Sheeran, 2006; Armitage and colleagues',
+  },
+  {
+    title: 'Tracking progress toward a goal helps',
+    finding: 'Across 138 experiments, monitoring progress toward a goal helped people reach it, especially when progress was recorded.',
+    does: 'Your dashboard shows today against the budget you chose.',
+    cite: 'Harkin et al., 2016, Psychological Bulletin',
+  },
+  {
+    title: 'The brain tunes out what never changes',
+    finding: "Studies of warning messages found the brain's response fades quickly when a warning looks the same every time, and lasts longer when its appearance varies.",
+    does: 'The counter and pause screens change over time so they stay noticeable.',
+    cite: 'Anderson, Vance, Kirwan and colleagues',
+  },
+  {
+    title: 'Clear interruptions beat subtle ones',
+    finding: 'A 2026 field study of short-form scrolling found an explicit pop-up got people to stop much faster than a subtle, gradually darkening overlay.',
+    does: 'The pause is a clear screen, not a faint overlay that blends into the video.',
+    cite: 'Field study on short-form video interventions, 2026',
+  },
+  {
+    title: "Talking to people matters; passive scrolling doesn't",
+    finding: 'In a study of over 86,000 phone sessions, talking with close friends and family felt highly meaningful, while passive scrolling felt least meaningful.',
+    does: 'Messages are never interrupted, and reels from friends play freely.',
+    cite: 'Lukoff et al., 2018',
+  },
+  {
+    title: 'Kindness works better than shame',
+    finding: "Across four experiments, responding to setbacks with self-compassion increased people's motivation to improve.",
+    does: 'No streaks, no scolding, no red warnings. Slips are treated as information.',
+    cite: 'Breines and Chen, 2012',
+  },
+  {
+    title: 'Simple visuals help habits stick',
+    finding: "A glanceable garden on the phone's home screen, which grew with healthy activity, supported people's habits over three months. Simpler visuals worked better than elaborate ones.",
+    does: 'Your companion shows the state of a scroll at a glance.',
+    cite: 'Consolvo et al., UbiFit Garden',
+  },
+];
+---
+<section id="science">
+  <div class="wrap">
+    <h2>Every feature has a reason.</h2>
+    <p class="lede">Unloop is built on published research about habits, attention, and behavior change. Here's what each part is based on.</p>
+    <ul class="sci-list">
+      {studies.map((s) => (
+        <li>
+          <div><h3>{s.title}</h3><p class="finding">{s.finding}</p></div>
+          <p class="does"><b>In Unloop</b>{s.does}</p>
+          <cite>{s.cite}</cite>
+        </li>
+      ))}
+    </ul>
+    <p class="sci-note">These studies describe the techniques Unloop uses. They are not studies of Unloop itself. Once our beta finishes, we'll share what we learned, including what didn't work.</p>
+  </div>
+</section>
