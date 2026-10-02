@@ -15,3 +15,7 @@ npm run preview
 - `src/layouts/Layout.astro` holds the `<head>`, meta tags, JSON-LD, and shared SVG gradients.
 - `src/styles/global.css` is the full stylesheet (light/dark theme tokens on `:root`).
 - `src/scripts/main.js` drives the interactive bits: the companion orbs, the phone demo, the loop toggle, and the companion state picker.
+
+## Deployment
+
+Pushes to `main` deploy to GitHub Pages via `.github/workflows/deploy.yml`, served at https://unloop.zeuada.com (`public/CNAME`).

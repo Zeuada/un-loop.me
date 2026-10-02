@@ -2,5 +2,5 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://zeuada.com',
+  site: 'https://unloop.zeuada.com',
 });
