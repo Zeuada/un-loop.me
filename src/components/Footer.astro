@@ -1,10 +1,13 @@
+---
+const home = Astro.url.pathname === '/' ? '' : '/';
+---
 <footer>
   <div class="wrap foot">
     <p>Unloop is made by <a href="https://zeuada.com">Zeuada</a>. © 2026</p>
     <ul>
-      <li><a href="/unloop/privacy">Privacy policy</a></li>
+      <li><a href="/privacy">Privacy policy</a></li>
       <li><a href="mailto:support@zeuada.com">Support</a></li>
-      <li><a href="#science">Research</a></li>
+      <li><a href={`${home}#science`}>Research</a></li>
     </ul>
   </div>
 </footer>

@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { Content } from '../docs/privacy-policy.md';
+---
+<Layout
+  title="Unloop Privacy Policy"
+  description="What information Unloop uses, where it is stored, what leaves your phone, and the choices you have."
+  ogDescription="What information Unloop uses, where it is stored, what leaves your phone, and the choices you have."
+>
+  <Nav />
+
+  <main id="top">
+    <article class="wrap legal">
+      <Content />
+    </article>
+  </main>
+
+  <Footer />
+
+  <script>
+    import { paintOrbs } from '../scripts/orb.js';
+
+    paintOrbs();
+    document.querySelector('.brand [data-orb]').style.cssText = 'display:inline-block;width:30px;height:30px';
+  </script>
+</Layout>

@@ -1,4 +1,7 @@
 ---
+// Section anchors live on the homepage; other pages link back to them.
+const home = Astro.url.pathname === '/' ? '' : '/';
+
 const links = [
   { href: '#how', label: 'How it works' },
   { href: '#features', label: 'Features' },
@@ -8,11 +11,11 @@ const links = [
 ];
 ---
 <header class="nav">
-  <a class="brand" href="#top" aria-label="Unloop home"><span data-orb="fresh" aria-hidden="true"></span>Unloop</a>
+  <a class="brand" href={`${home}#top`} aria-label="Unloop home"><span data-orb="fresh" aria-hidden="true"></span>Unloop</a>
   <nav aria-label="Main">
     <ul>
-      {links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+      {links.map((l) => <li><a href={home + l.href}>{l.label}</a></li>)}
     </ul>
   </nav>
-  <a class="btn btn-primary" href="#get">Get early access</a>
+  <a class="btn btn-primary" href={`${home}#get`}>Get early access</a>
 </header>
